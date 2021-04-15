@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\SignatureController;
 use App\Http\Controllers\Api\ReportSignature;
+use App\Http\Controllers\SignaturesController;
 
 use function PHPUnit\Framework\matches;
 
@@ -24,3 +25,4 @@ use function PHPUnit\Framework\matches;
 
 Route::resource('/signatures', SignatureController::class)->only(['index', 'store', 'show']);
 Route::put('/signatures/{signature}/report', [ReportSignature::class, 'update']);
+Route::get('/sign', [SignaturesController::class, 'create'])->name('sign');
