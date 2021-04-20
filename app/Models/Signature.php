@@ -38,6 +38,6 @@ class Signature extends Model
      */
     public function getAvatarAttribute()
     {
-        return sprintf('https://www.gravatar.com/avatar/%s?s=100', md5($this->email));
+        return sprintf('https://robohash.org/%s.png', md5($this->email));
     }
 }

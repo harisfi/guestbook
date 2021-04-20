@@ -27,7 +27,7 @@ class SignatureFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'email' => $this->faker->safeEmail(),
-            'body' => $this->faker->sentence()
+            'body' => $this->faker->realTextBetween()
         ];
     }
 }

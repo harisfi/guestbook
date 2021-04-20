@@ -18,7 +18,7 @@ class SignatureController extends Controller
     {
         $signatures = Signature::latest()
             ->ignoreFlagged()
-            ->paginate(20);
+            ->paginate(7);
         
         return SignatureResource::collection($signatures);
     }
